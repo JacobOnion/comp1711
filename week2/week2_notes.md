@@ -1,0 +1,1 @@
+chmod u+x hello.sh to compile bash scripts
