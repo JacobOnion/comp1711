@@ -4,7 +4,8 @@
 int main(){
     //ex3();
     //ex6();
-    ex8();
+    //ex8();
+    //ex10();
     return 0;
 }
 
@@ -30,11 +31,29 @@ void ex8(){
     int num;
     int total = 1;
     printf("Enter an integer: ");
-    scanf("%d", num);
+    scanf("%d", &num);
     for (int i = 1; i <= num; i++)
     {
         printf("%d", i);
         total *= i;
     }
     printf("%d\n", num);
+}
+
+void ex10(){
+    int value;
+    int rate;
+    int time;
+    int total;
+    printf("Please enter original value: ");
+    scanf("%d", &value);
+    printf("Please enter interest rate: ");
+    scanf("%d", &rate);
+    printf("Please enter time since transaction in years: ");
+    scanf("%d", &time);
+    for (int i = 0; i < time; i++)
+    {
+        value += value *(rate/100);
+    }
+    printf("the total is %d\n", value);
 }
