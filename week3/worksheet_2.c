@@ -4,6 +4,7 @@ int ex4();
 int isPrime(int num1);
 int ex5();
 int str_len(char *input);
+void concatStrings();
 
     int str_len(char *input)
     {
@@ -59,22 +60,22 @@ int ex5()
 {
     char string1[20];
     char string2[20];
-    printf("Enter two strings: ");
+    char totalString[41];
+    printf("Enter two strings: \n");
     scanf("%s", string1);
     scanf("%s", string2);
-    concatStrings(string1, string2);
-
+    concatStrings(string1, string2, totalString);
+    printf("The total string is %s", totalString);
 }
 
  void concatStrings(char *string1, char *string2, char *totalString)
  {
-    char totalString[41];
     int counter = str_len(string1);
-    for (int i = 0; i < counter - 1; i++)
+    for (int i = 0; i < counter; i++)
     {
         totalString[i] = string1[i];
     }
-    for(int i = counter; i < counter + str_len(string2) - 1; i++)
+    for(int i = counter; i < counter + str_len(string2); i++)
     {
         totalString[i] = string2[i - counter];
     }
